@@ -3034,7 +3034,7 @@ function Library:CreateWindow(...)
 
     local TabListLayout = Library:Create('UIListLayout', {
         Padding = UDim.new(0, Config.TabPadding);
-        FillDirection = Enum.FillDirection.Vertical;
+        FillDirection = Enum.FillDirection.Horizontal;
         SortOrder = Enum.SortOrder.LayoutOrder;
         Parent = TabArea;
     });
