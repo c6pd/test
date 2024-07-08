@@ -2943,7 +2943,7 @@ function Library:CreateWindow(...)
         Config.AutoShow = Arguments[2] or false;
     end
 
-    if type(Config.Title) ~= 'string' then Config.Title = 'No title' end
+    if type(Config.Title) ~= 'string' then Config.Title = 'No ' end
     if type(Config.TabPadding) ~= 'number' then Config.TabPadding = 0 end
     if type(Config.MenuFadeTime) ~= 'number' then Config.MenuFadeTime = 0.2 end
 
@@ -3054,8 +3054,9 @@ function Library:CreateWindow(...)
         BorderColor3 = 'OutlineColor';
     });
 
-    function Window:SetWindowTitle(Title)
+    function Window:SetWindow(Title)
         WindowLabel.Text = Title;
+        WindowLabel.TextXAlignment.Center
     end;
 
     function Window:AddTab(Name)
